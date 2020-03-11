@@ -1,4 +1,4 @@
-#Setting Up Express with Handlebars
+# Setting Up Express with Handlebars
 
 1. Make sure Express Generator is installed. If not run the following command:
 
