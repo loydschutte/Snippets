@@ -1,3 +1,5 @@
+# Basic React JSON file
+
 {
     "name": "react-tutorials",
     "version": "0.0.0",
