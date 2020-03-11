@@ -1,0 +1,5 @@
+# Reset a WordPress Admin Password in the Database
+
+```
+UPDATE `wp_users` SET `user_pass` = MD5( 'new_password' ) WHERE `wp_users`.`user_login` = "admin_username";
+```
