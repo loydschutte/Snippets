@@ -20,5 +20,4 @@ function my_admin_colors() { ?>
     </style>
 <?php }
 add_action( 'admin_enqueue_scripts', 'my_admin_colors' );
-
 ```
