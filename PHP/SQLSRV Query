@@ -1,0 +1,48 @@
+ <?php
+ /* The following is for PHP7 connecting to an MSSQL database */
+ 
+ $connectionInfo = array(
+    "Database" => "database"], 
+    "UID" => "userid", 
+    "PWD" => "password",
+    "ReturnDatesAsStrings" => true
+  );
+  
+  // initiate a connection
+  $link = sqlsrv_connect( "host", $connectionInfo);
+  
+  if( !$link ) {
+    echo "Connection could not be established.<br />";
+    die( print_r( sqlsrv_errors(), true));
+    $myerrors = sqlsrv_errors();
+    error_log($myerrors);
+  }
+
+  // set up the query
+
+ $query = "
+    SELECT 
+     *
+    FROM
+      sqldatabase
+      where
+      item = conditionmet
+  ";
+  
+  $sqlQuery = sqlsrv_query($link, $query);
+
+  // output result as object
+
+  $result = (object) array();
+  $result->query = $query;			
+  $cases = array();
+  while($row = sqlsrv_fetch_object($mssqlQuery)) {				
+    array_push(
+      $cases, 
+      array(
+        "data_one"=> $row->DATA_ONE,
+        "data_two" => $row->DATA_TWO,
+        "data_three" => $row->DATA_THREE
+      )
+    );			
+  }

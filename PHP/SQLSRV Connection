@@ -1,0 +1,18 @@
+<?php
+/* The following is for PHP7 connecting to an MSSQL database */
+
+$connectionInfo = array(
+  "Database" => $creds["db"], 
+  "UID" => $creds["user"], 
+  "PWD" => $creds["pass"],
+  "ReturnDatesAsStrings" => true
+);
+
+$link = sqlsrv_connect( $creds["host"], $connectionInfo);
+
+if( !$link ) {
+  echo "Connection could not be established.<br />";
+  die( print_r( sqlsrv_errors(), true));
+  $myerrors = sqlsrv_errors();
+  error_log($myerrors);
+}
