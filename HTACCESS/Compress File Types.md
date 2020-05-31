@@ -1,4 +1,7 @@
- # BEGIN gzip compression
+#Compress files on the server
+Add to the htaccess to compress files being served from the server to the client.
+
+#BEGIN gzip compression
 AddOutputFilterByType DEFLATE text/html
 AddOutputFilterByType DEFLATE text/css
 AddOutputFilterByType DEFLATE text/javascript
