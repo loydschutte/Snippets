@@ -1,0 +1,1 @@
+<div style="background: url(<?php the_post_thumbnail_url('original'); ?>); background-repeat: no-repeat; background-size: cover;">

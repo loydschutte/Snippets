@@ -1,0 +1,1 @@
+window.opener.location.href='http://www.google.com'
