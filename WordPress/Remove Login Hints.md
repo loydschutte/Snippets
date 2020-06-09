@@ -1,0 +1,8 @@
+<?php
+
+function no_wordpress_errors(){
+  return 'GET OFF MY LAWN !! RIGHT NOW !!';
+}
+add_filter( 'login_errors', 'no_wordpress_errors' );
+
+?>
