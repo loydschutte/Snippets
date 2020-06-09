@@ -1,0 +1,3 @@
+View output in nice json format in a view template.
+
+<pre>{{person.citations | json}}</pre>
