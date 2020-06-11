@@ -13,14 +13,14 @@ To initiate a query use the format:
 
 Use placeholders to represent information in the query. You can also use OBJECT, ARRAY_A (associative) and ARRAY_N (named) to return data. The array in the statement above will default to OBJECTS.
 
-**Named Array
+**Named Array**
 
     $ourData = $db->query( $db->prepare(" SELECT * INTO tablename WHERE itemnumber = $itemnumber AND itemtext = $itemtext )", ARRAY_N));
 
-**Associative Array
+**Associative Array**
 
     $ourData = $db->query( $db->prepare(" SELECT * INTO tablename WHERE itemnumber = $itemnumber AND itemtext = $itemtext )", ARRAY_A));
 
-**Object
+**Object**
 
     $ourData = $db->query( $db->prepare(" SELECT * INTO tablename WHERE itemnumber = $itemnumber AND itemtext = $itemtext )", OBJECT));
